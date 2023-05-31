@@ -11,7 +11,7 @@ class WebhookController extends Controller
     public function handle17TrackWebhook(Request $request)
     {
 
-        dd(["test" => "test"]);
+        // dd(["test" => "test"]);
         // Verify the request origin or any required security measures here
         // ...
     
