@@ -18,6 +18,7 @@ class WebhookController extends Controller
         // Process the webhook payload
         $payload = $request->all();
     
+        
         // Perform actions based on the webhook data
         if (!empty($payload)) {
             // Extract relevant information from the payload
