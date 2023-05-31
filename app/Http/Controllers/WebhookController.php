@@ -17,8 +17,9 @@ class WebhookController extends Controller
     
         // Process the webhook payload
         $payload = $request->all();
+
     
-        
+
         // Perform actions based on the webhook data
         if (!empty($payload)) {
             // Extract relevant information from the payload
@@ -31,11 +32,14 @@ class WebhookController extends Controller
                     // Perform actions for tracking update event
                     // Access the tracking data in the $data variable
                     
+                    dd(['success' => true]);
                     // ...
     
                     break;
                 // Add more cases for other events if needed
             }
+        }else{
+            dd(['payload' => 'empty']);
         }
     
         // Send a response if required (optional)
