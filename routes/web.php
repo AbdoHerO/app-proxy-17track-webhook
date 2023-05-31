@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any('/webhook/17track', [WebhookController::class,'handle17TrackWebhook'])->name('17trackwebhook');
+Route::post('/webhook/17track', [WebhookController::class,'handle17TrackWebhook'])->name('17trackwebhook');
 
 // Route::post('/webhook/17track', 'WebhookController@handle17TrackWebhook');
 
