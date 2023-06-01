@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TrackingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebhookController;
 
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::post('/webhook/17track', [WebhookController::class,'handle17TrackWebhook'])->name('17trackwebhook');
+Route::match(['get', 'post'], '/tracking', [TrackingController::class,'index'])->name('tracking');
+Route::get('/fetch-tracking-data', [TrackingController::class, 'fetchTrackingData']);
 
 // Route::post('/webhook/17track', 'WebhookController@handle17TrackWebhook');
 
